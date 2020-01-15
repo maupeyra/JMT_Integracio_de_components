@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+</head>
+<script>
+
+	var salutacio = "Hola món";/*Exemple senzill de variable: assignar el text desitjat (en groc, entre cometes) la paraula desitjada, en aquest cas "salutacio"*/
+	var elMeuNom = "Adrià Tarrés Maupeyra";
+	var x = 5;/*Les variables de numeros s'han d'escriure sense cometes per que ho tracti com a tal, si no ho tractara com a text*/
+	var y = 8;
+	var z = x+y;
+	var preu1 = 2.55;
+	var preu2 = 5.15;
+	var preu3 = 4.20;
+	var preuTotal = preu1 + preu2 + preu3;
+	var edat = 28;
+
+	/*JavaScript tracta les lletres com a cadena de paraules, els numeros els suma i les lletres + numeros també els encadena*/
+
+	alert (salutacio);/*Gracies a la variable de l'exemple podem crear un alert utilitzant només el nom de la variable*/
+	alert (elMeuNom);
+	alert (z);
+	alert ("El preu total es de " + preuTotal);
+	/*Inici de les estructures dels condicionals (if + else) i (if + else-if + else) Per comprovar el funcionament s'ha de canviar la variable preuTotal treien el preu3, per exemple*/
+	/*Estructura if + else*/
+	if (preuTotal < 10) {
+		alert("El preu no supera els 10 euros");
+	} 
+	else {
+		alert ("El preu supera els 10 euros");
+	}
+	/*Estructura if + else-if + else*/
+	if (preuTotal < 5) {
+		alert ("El preu no supera els 5 euros");
+	}
+	else if (preuTotal < 10) {
+		alert ("El preu no supera els 10 euros");
+	}
+	else {
+		alert ("El preu supera els 10 euros");
+	}
+	/*Condicions else-if: si el preu es mes petit de 5 mostrarà la primera alerta (if), si supera els 10 euros mostrarà la segona (else-if) i si NO compleix cap de les anteriors mostrara la tercera(else)*/
+	/*Else seria un simple "altrament", en canvi Else-if es un altrament + condicio*/
+	if (edat < 30) {
+		alert ("La teva edat esta per sota de 30 anys");
+	}
+	else if (edat < 40) {
+		alert ("La teva edat esta per sota de 40 anys");
+	}
+	else if (edat < 50) {
+		alert ("La teva edat esta per sota de 50 anys");
+	}
+	else if (edat > 50) {
+		alert ("La teva edat esta per sobre de 50 anys");
+	}
+	/*Inici condicionals multiples (unir condicions amb el seu else)*/
+	if (edat < 20 ) {
+		alert ("He nascut al segle XXI")
+	}
+	else if (edat > 20 && edat < 29) {
+		alert ("He nascut als 90")
+	}
+	else if (edat > 30 && edat > 39) {
+		alert ("He nascut als 80")
+	}
+	else {
+		alert ("He nascut als 70 o abans")
+	}
+	/*Quan fem servir && (and), el resultat final serà cert si compleix totes les condicions.
+	Quan fem servir || (or), el resultat final serà cert si compleix només una de les condicions.
+	Si tenim && i || en un mateix condicional, primers’evaluen els “&&”, i posteriorment els ||*/
+</script>
+<body>
+<h2>El meu primer JavaScript</h2>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Inici exemple bucle For*/
+        var text = "Els números són: ";
+        for (i = 0; i < 5; i++){
+            text = text + " " + i;/* seria igual que fer: text += " " + i; */
+        }/*Les cometes serveixen per donar espais entre els valors de la variable i, en aquest cas*/
+        alert (text);
+
+    /*Inici exercici 12: Fes un bucle for, que tregui 5 alerts, cadascun
+    d’ells amb un número que vagi de l’1 al 5*/
+       
+        for (i=1; i <= 5; i++) {
+            alert (i); 
+        }
+
+    /*Inici exercici 13: Fes un bucle for, que tregui 5 alerts, cadascun
+    d’ells amb un número que vagi del 5 al 1*/
+
+        for (i=5; i>=1; i--) {
+            alert (i)
+        }
+
+    /*Inici exercici 14: Fes un bucle for, que tregui 5 alerts, cadascun
+    d’ells amb un número que vagi de l’1 al 5 i que digui si es
+    parell o imparell. Pista: heu de calcular el mòdul (el resto) del
+    número en qüestió entre 2*/
+
+        for (i=1; i <= 5; i++) {
+            if (i % 2 == 0) {
+                alert (i + " És parell");
+            }
+            else {
+                alert (i + " És senar");
+            }
+        }
+
+    /*Inici exercici 15: Fes un bucle amb un switch a dintre, per tal de que
+    tregui un alert per cada dia de la setmana, de manera que per a
+    l’1 mostri: “dilluns”, per al 2 mostri: “dimarts”....*/
+
+        
+        for (i=1; i<=7; i++) {
+            switch (i) {
+                case 1:
+                alert ("Dilluns");
+                break;
+                case 2:
+                alert ("Dimarts");
+                break;
+                case 3:
+                alert ("Dimecres");
+                break;
+                case 4:
+                alert ("Dijous");
+                break;
+                case 5:
+                alert ("Divendres");
+                break;
+                case 6:
+                alert ("Dissabte");
+                break;
+                case 7:
+                alert ("Diumenge");
+                break;
+            }
+        }
+
+    </script>
+    <h1>Segon JavaScript</h1>
+</body>
+</html>

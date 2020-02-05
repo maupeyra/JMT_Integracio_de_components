@@ -56,20 +56,150 @@
 	}
 	/*Inici condicionals multiples (unir condicions amb el seu else)*/
 	if (edat < 20 ) {
-		alert ("He nascut al segle XXI")
+		alert ("He nascut al segle XXI");/*Tinc una variable anomenada edad amb els meus anys, aquest "if" o si, executara l'alert només si al llegir la variable es compleix la condició comparativa(igualment amb totes les ordres seguents)*/
 	}
-	else if (edat > 20 && edat < 29) {
-		alert ("He nascut als 90")
+	else if (edat >= 20 && edat <= 29) {
+		alert ("He nascut als 90");
 	}
-	else if (edat > 30 && edat > 39) {
-		alert ("He nascut als 80")
+	else if (edat >= 30 && edat >= 39) {
+		alert ("He nascut als 80");
 	}
 	else {
-		alert ("He nascut als 70 o abans")
+		alert ("He nascut als 70 o abans");
 	}
 	/*Quan fem servir && (and), el resultat final serà cert si compleix totes les condicions.
 	Quan fem servir || (or), el resultat final serà cert si compleix només una de les condicions.
 	Si tenim && i || en un mateix condicional, primers’evaluen els “&&”, i posteriorment els ||*/
+
+	/*Inici d'exemple "switch", al final no es més que una comparativa de ==*/
+	var dia = 7;
+
+	switch(dia) {
+		case 1:
+			alert('Dilluns');
+			break;
+		case 2:
+			alert('Dimarts');
+			break;
+		case 3:
+			alert('Dimecres');
+			break;
+		case 4:
+			alert('Dijous');
+			break;
+		case 5:
+			alert('Divendres');
+			break;
+		case 6:
+			alert('Dissabte');
+			break;
+		case 7:
+			alert('Diumenge');
+			break;
+		default:/*Es un valor no obligatori, al exemple d'abaix no l'hem possat i funciona igual*/
+			alert('No es un dia de la setmana');
+	}
+
+	switch(dia) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			alert('Avui toca treballar');
+			break;/*Serveix per trencar amb l'execució per passar a la seguent*/
+		case 6:
+		case 7:
+			alert('Avui festa!!!');
+			break;
+	}
+	/*Inici exercici 7 de la presentació 3 de Josep Mª Tolsà*/
+	var planta = 6;
+
+	switch(planta) {
+		case 5:
+			alert("Les habitacions valen 100 €")
+			break;
+		case 4:
+			alert("Les habitacion valen 80 €")
+			break;
+		case 1:
+		case 2:
+		case 3:
+			alert("Les habitacions vales 60 €")
+			break;
+		default:
+			alert("No tenim tantes plantes al Hotel")
+	}
+	var sorteig = 178
+	switch(sorteig) {
+		case 178:
+			alert ("Guanyador del primer premi");
+		break;
+		case 241:
+			alert ("Guanyador del segon premi");
+		break;
+		case 25:
+			alert ("Guanyador del tercer premi");
+		break;
+		default:
+			alert ("No has guanyat res");
+		break;
+	}
+
+	/*Exemple de bucle "while"*/
+
+	var capacitat = 55;
+	var litresActuals = 15;
+
+	while (capacitat>litresActuals){
+		litresActuals=litresActuals+1;
+	}
+	alert ("El dipósit te "+litresActuals+" litres");/*Posarem l'alert fora ja que sinó repetirà com un bucle les alertes, per tant, dins del "while" només posarem les comparatives*/
+
+	/*Inici exercici 10*/
+	var saldo = 5;
+	var minuts = 0;
+	while(saldo>=0.08) {
+		saldo = saldo-0.08;
+		minuts = minuts + 1;
+	}/*La informació que tinc es el saldo, un total de 5. També conec el preu del minut. Vull saber cuants minuts puc parlar amb el total del saldo.
+	Per tant, mentre el saldo sigui major que el preu del minut, podrè comprar minuts.
+	Llavors, cada vegada que aixo es compleixi, sumarem 1 minut*/
+	alert ("Amb 5 euros podras parlar " + minuts+ " minuts");
+
+	/*Inici exercici 11*//*Volem saber quantes vegades (repeticions) s'haurà de calcular la linia de codi (Math.floor (Math.random() * 100), fins que surti el "numeroSort" que hem escollit. Per tant, donem un valor al "numeroSort", les repeticions no les sabem per tant, son 0 i la variable "trobat" és falsa perque fins que no sigui certa no pararà de calcular. En el moment que "trobat" sigui cert, pararà el bucle perquè haurà trobat el numero que li hem asignat a "numeroSort"*/
+	var numeroSort = 17;
+	var trobat = false;
+	var repeticions = 0;
+	while (trobat == false) {
+		if (Math.floor (Math.random() * 100) == numeroSort) {
+			trobat = true;
+		}
+		else {
+		repeticions++;/*Es igual a escriure: repeticions = repeticions + 1 / per tant, el ++ es igual a +1*/
+		}
+	}
+	alert (repeticions);
+
+	/*Activitat anterior pero amb "do.. while" - La diferencia es que en aquest cas, li diem al navegador que provi a fer el codi si o si.
+	En canvi, el while es una condició "mentre" que vol dir que el navegador només fara l'acció mirant el while*/
+	var numeroSort = 17;
+	var trobat = false;
+	var repeticions = 0;
+	do {
+		if (Math.floor (Math.random() * 100) == numeroSort) {
+			trobat = true;
+		}
+		else {	
+		repeticions++;
+		}
+	}
+	while (trobat == false);
+		
+	alert (repeticions);
+
+
 </script>
 <body>
 <h2>El meu primer JavaScript</h2>
